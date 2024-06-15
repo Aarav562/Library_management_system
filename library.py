@@ -40,6 +40,12 @@ class Patron:
     def __repr__(self):
         val = len(self.books_borrowed)
         return f"{self.__class__.__name__}({self.__name},{self.__reg_no},{self.__branch},{self.__section},Books_borrowed = {val}"
+    
+    def borrowed_books(self):
+        books =[]
+        for i in self.books_borrowed:
+            books.append(i)
+        return books
 
 class Book:
     id_counter = 1
